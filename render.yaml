@@ -1,0 +1,9 @@
+# render.yaml
+
+services:
+  - name: web
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -b 0.0.0.0:$PORT -w 4 app.main:app
+    envVars:
+      - key: PORT
+        value: 8080
