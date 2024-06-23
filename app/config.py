@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     access_token_expire_minutes : int
     database_url : str
 
-    class config:
-        env_file = ".env"
+    # class config:
+    #     env_file = ".env"
 
 settings = Settings()
